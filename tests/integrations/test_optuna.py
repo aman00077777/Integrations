@@ -20,8 +20,9 @@ from __future__ import annotations
 import subprocess
 import sys
 
-import optuna
 import pytest
+
+optuna = pytest.importorskip("optuna")
 
 from fusion.integrations.optuna import (
     run_optuna_search,
